@@ -11,7 +11,7 @@
     </div> <!-- end hero -->
 
     <div class="container-inner mx-auto">
-      <p class="text-lg text-justify sm:text-xl">Hi! I'm Arif Pavel. I live within the loop of LPCDR ( Learn - Plan - Code - Debug - Deploy ) <a href="https://andremadarang.com">personal website</a>. I added more features and decided to release it as an open source project. Check it out on <a href="https://github.com/drehimself/gridsome-portfolio-starter">GitHub</a> or check out the <a href="https://www.youtube.com/watch?v=uHo6o1TNQeE">screencast I did</a>. Feel free to use it for your own site or projects! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, repellat. Dolores iure, quas perspiciatis rerum quaerat atque eum repellat autem.</p>
+      <p class="text-lg text-justify sm:text-xl">Hi! I'm Arif Pavel. I live within the loop of LPCDR ( Learn - Plan - Code - Debug - Deploy ). I've started my programming journey back in 2012 with C & developed problem solving skills. By partifipcating many competitive programming competition i've enhanced my knowledge on advanced computing techniques, Data Structures & other core computer science skills. Then learned OOP & several languages (Java, PHP, Python). In 2013 i joined as a junior web develper at a local company, later worked as web developer, backend engineer, full stack developer in several multinational software company. Since, past few years mainly working on Laravel & VueJS with some other techs/libraries like Flutter, Wordpress, Tailwind. Like to spend leisure time on traveling & contributing opensource projects.</p>
 
       <div class="flex justify-between items-center py-6">
         <div class="w-full sm:w-1/2 px-8 py-8 sm:py-0">
@@ -54,22 +54,7 @@
     </div>
 
     <div class="overflow-x-hidden border-gray-200 border-b">
-      <div class="get-to-know-me container-inner mx-auto text-xl pb-16 relative">
-        <h2 class="font-bold mb-6" id="about">Get to know me:</h2>
-
-        <div class="absolute left-0" style="top: 50px; transform: translateX(-100%)">
-          <svg width="170px" height="170px"><use xlink:href="#dots-triangle" /></svg>
-        </div>
-
-        <div class="flex flex-col sm:flex-row justify-between items-center mb-16">
-          <div><g-image src="../../static/avatar.png" alt="avatar" class="w-32 h-32 rounded-full mb-8 lg:mb-0" /></div>
-          <div class="flex-1 text-lg sm:text-xl ml-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum quae architecto minus molestias iusto ducimus fuga quo quia libero dignissimos, fugiat modi assumenda debitis laboriosam.</div>
-        </div>
-
-        <div class="responsive-container">
-          <iframe class="responsive-iframe w-full h-full top-0 left-0 border-0" src="https://www.youtube.com/embed/uHo6o1TNQeE" style="border:0;" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div> <!-- end get-to-know me -->
+      <Skills /><!-- end of skills -->
     </div>
 
     <div class="overflow-x-hidden">
@@ -122,20 +107,7 @@
 
     <div class="newsletter bg-background-tertiary">
       <div class="container-inner mx-auto py-16 pb-8 text-center textl-xl">
-        <h2 class="text-2xl font-bold mb-8">Join my Newsletter</h2>
-
-        <div class="w-4/5 mx-auto mb-8">
-          <p class="mb-8 text-lg sm:text-xl">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, voluptatum. Quam, deleniti nulla.</p>
-
-          <form action="#">
-            <div class="flex flex-col sm:flex-row">
-              <input type="email" name="email" placeholder="Your email address" class="flex-1 bg-background-form rounded sm:rounded-r-none px-4 py-4 leading-normal border border-border-color-primary sm:border-r-0 shadow outline-none focus:border-red-700 z-10" required>
-              <button data-element="submit" class="flex-2 w-40 uppercase bg-red-700 text-white rounded sm:rounded-l-none text-lg py-3 px-8 tracking-wide shadow focus:outline-none hover:bg-red-800 focus:bg-red-800 z-10 w-full sm:w-auto mt-4 sm:mt-0">
-                <span>Subscribe</span>
-              </button>
-            </div>
-          </form>
-        </div>
+        <AboutMe />
       </div>
 
       <div class="container-inner mx-auto -mt-32 pb-4 overflow-x-hidden">
@@ -147,9 +119,16 @@
 </template>
 
 <script>
+import AboutMe from '../components/AboutMe'
+import Skills from '../components/Skills'
+
 export default {
   metaInfo: {
     title: 'Home'
+  },
+  components: {
+    AboutMe,
+    Skills
   }
 }
 </script>
