@@ -11,7 +11,7 @@ module.exports = function (api, options) {
     let posts;
     await axios.get('https://jsonplaceholder.typicode.com/posts')
     .then( (res) => {
-      console.log(res)
+      // console.log(res)
       posts = res.data
     })
     
