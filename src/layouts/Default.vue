@@ -27,6 +27,10 @@
             <g-link v-else to="/#projects" class="text-copy-primary hover:text-red-600">Projects</g-link>
           </li>
           <li>
+            <a v-if="$route.path === '/'" href="/#skills" v-scroll-to="'#skills'" class="text-copy-primary hover:text-red-600" data-cypress="skills">Skills</a>
+            <g-link v-else to="/#skills" class="text-copy-primary hover:text-red-600">Projects</g-link>
+          </li>
+          <li>
             <a v-if="$route.path === '/'" href="/#about" v-scroll-to="'#about'" class="text-copy-primary hover:text-red-600" data-cypress="about">About</a>
             <g-link v-else to="/#about" class="text-copy-primary hover:text-red-600">About</g-link>
           </li>
@@ -115,7 +119,7 @@ export default {
     ThemeSwitcher
   },
   mounted() {
-    this.theme = localStorage.getItem('theme') || 'theme-dark'
+    this.theme = localStorage.getItem('theme') || 'theme-light'
   },
   data() {
     return {

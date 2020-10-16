@@ -1,7 +1,7 @@
 <template>
   <div class="justify-center">
       <div class="card">
-        <div class="p-6 flex-1">
+        <div class="p-6 flex-1" id="about">
             <div class="flex items-center justify-center space-x-2">
             <div class="avatar"><g-image src="../../static/avatar.png" alt="avatar" class="w-32 h-32 rounded-full mb-8 lg:mb-0" /></div>
             <div>
@@ -19,7 +19,7 @@
                 <p class="text-sm text-gray-600 leading-none font-medium">Repositories</p>
             </div>
             <div class="flex-1 p-2">
-                <h5 class="font-bold text-sm text-red-300">10,000+</h5>
+                <h5 class="font-bold text-sm text-red-300">2,000+</h5>
                 <p class="text-sm text-gray-600 leading-none font-medium">Coffees</p>
             </div>
             </div>
