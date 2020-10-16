@@ -1,6 +1,6 @@
 <template>
   <div class="skills container-inner mx-auto text-xl pb-16 mb-1 relative">
-        <h2 class="font-bold mb-6" id="skills">I love doing things with</h2>
+        <h2 class="font-bold mb-6" id="skills">I love doing things with:</h2>
 
         <div class="flex flex-col sm:flex-row justify-between items-center mb-16">
             <div class="grid gap-2 grid-cols-12">
