@@ -8,9 +8,14 @@
           <!-- <span> &middot; </span> -->
           <span> By {{ post.node.author.name }}</span>
         </div>
-
-        <div class="text-lg mb-4">
-          {{ post.node.summary }}
+        <g-image
+          v-if="post.node.featuredMedia"
+          :src="post.node.featuredMedia.sourceUrl"
+          :alt="post.node.featuredMedia.altText"
+          fluid
+          class="mt-4 w-full h-56 pb-2"
+        />
+        <div class="text-lg mb-4" v-html="post.node.summary">
         </div>
 
         <div class="mb-8">
@@ -47,6 +52,13 @@ query Posts ($page: Int) {
               name
               path
           }
+        featuredMedia {
+          sourceUrl
+          altText
+          mediaDetails {
+            width
+          }
+        }
       }
     }
   }

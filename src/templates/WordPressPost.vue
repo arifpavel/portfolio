@@ -18,7 +18,7 @@
           :width="$page.post.featuredMedia.mediaDetails.width"
           :alt="$page.post.featuredMedia.altText"
           fluid
-          class="mt-4"
+          class="mt-4 pb-2"
         />
       <div class="markdown-body mb-8" v-html="$page.post.content" />
       <div class="mb-8">

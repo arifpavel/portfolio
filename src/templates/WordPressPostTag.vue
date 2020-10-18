@@ -6,13 +6,18 @@
       <div v-for="post in $page.tag.belongsTo.edges" :key="post.node.id" class="post border-gray-400 border-b mb-12">
         <h2 class="text-3xl font-bold"><g-link :to="post.node.path" class="text-copy-primary">{{ post.node.title }}</g-link></h2>
         <div class="text-copy-secondary mb-4">
-          <span>{{ post.node.date }}</span>
+          <span>{{ post.node.date }} By {{ post.node.author.name }}</span>
           <!-- <span> &middot; </span>
           <span>{{ post.node.timeToRead }} min read</span> -->
         </div>
-
-        <div class="text-lg mb-4">
-          {{ post.node.summary }}
+        <g-image
+          v-if="post.node.featuredMedia"
+          :src="post.node.featuredMedia.sourceUrl"
+          :alt="post.node.featuredMedia.altText"
+          fluid
+          class="mt-4 w-full h-56 pb-2"
+        />
+        <div class="text-lg mb-4" v-html=" post.node.summary ">
         </div>
 
         <div class="mb-8">
@@ -50,6 +55,17 @@ query Tag ($id: ID!, $page: Int) {
             summary:excerpt
             tags {
               title
+            }
+            author{
+              name
+              path
+            }
+            featuredMedia {
+              sourceUrl
+              altText
+              mediaDetails {
+                width
+              }
             }
           }
         }

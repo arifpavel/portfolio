@@ -44,7 +44,7 @@
           >
             {{ post.item.title }}
 
-            <span class="block font-normal text-copy-primary text-sm my-1">{{ post.item.summary }}</span>
+            <span class="block font-normal text-copy-primary text-sm my-1" v-html="post.item.summary"></span>
           </a>
 
           <div v-if="results.length === 0" class="bg-background-form font-normal w-full border-b cursor-pointer p-4">

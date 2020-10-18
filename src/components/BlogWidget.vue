@@ -1,24 +1,23 @@
 <template>
   <div class="grid grid-cols-2 gap-2">
-      <div v-for="post in $static.posts.edges" :key="post.id" class="max-w-sm w-full lg:max-w-full lg:flex">
+      <div v-for="post in $static.posts.edges" :key="post.id" class="max-w-sm w-full lg:max-w-full lg:flex h-80">
         <!-- <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('./../../blog/images/background.jpg')" title="Woman holding a mug">
                     
         </div> -->
-        <g-image
-          v-if="post.featuredMedia"
-          :src="post.featuredMedia.sourceUrl"
-          :width="post.featuredMedia.mediaDetails.width"
-          :alt="post.featuredMedia.altText"
+        <img
+          v-if="post.node.featuredMedia"
+          :src="post.node.featuredMedia.sourceUrl"
+          :alt="post.node.featuredMedia.altText"
           fluid
-          class="mt-4"
+          class="w-56 fill-current"
         />
-        <!-- <g-image v-else class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" src="https://s3.amazonaws.com/uifaces/faces/twitter/meln1ks/128.jpg" /> -->
+        <g-image v-else class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" src="https://s3.amazonaws.com/uifaces/faces/twitter/meln1ks/128.jpg" />
         <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
             <div class="mb-8">
             <div class="text-gray-900 font-bold text-xl mb-2">
               <a :href=" post.node.path ">{{ post.node.title }}</a>
             </div>
-            <p class="text-gray-700 text-base">{{ post.node.summary }}</p>
+            <div class="text-gray-700 text-base text-justify" v-html=" truncate( post.node.summary )"></div>
             </div>
             <div class="flex items-center">
             <div class="text-sm">
@@ -47,9 +46,6 @@ query {
         featuredMedia {
           sourceUrl
           altText
-          mediaDetails {
-            width
-          }
         }
       }
     }
@@ -59,6 +55,15 @@ query {
 
 <script>
 export default {
+  methods: {
+      truncate(str, num = 70) {
+        if (str.length > num) {
+          return str.substring(0, num) + "...";
+        } else {
+          return str;
+        }
+      }
+    }
 }
 </script>
 
