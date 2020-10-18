@@ -5,8 +5,8 @@
         <h2 class="text-3xl font-bold"><g-link :to="post.node.path" class="text-copy-primary">{{ post.node.title }}</g-link></h2>
         <div class="text-copy-secondary mb-4">
           <span>{{ post.node.date }}</span>
-          <span> &middot; </span>
-          <span>1 min read</span>
+          <!-- <span> &middot; </span> -->
+          <span> By {{ post.node.author.name }}</span>
         </div>
 
         <div class="text-lg mb-4">
@@ -43,6 +43,10 @@ query Posts ($page: Int) {
         date (format: "MMMM D, Y")
         summary: excerpt
         path: slug
+        author {
+              name
+              path
+          }
       }
     }
   }

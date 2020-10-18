@@ -59,18 +59,13 @@
 
 <static-query>
 query Search {
-  allPost {
+  allPost: allWordPressPost {
     edges {
       node {
         id
-        path
+        path: slug
         title
-        summary
-        headings {
-          depth
-          value
-          anchor
-        }
+        summary: excerpt
       }
     }
   }

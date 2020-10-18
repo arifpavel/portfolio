@@ -33,9 +33,9 @@
 
 <page-query>
 query Tag ($id: ID!, $page: Int) {
-  tag: tag (id: $id) {
+  tag: wordPressPostTag (id: $id) {
     title
-    belongsTo (page: $page, perPage: 3) @paginate {
+    belongsTo (page: $page, perPage: 3) {
       totalCount
       pageInfo {
         totalPages
@@ -43,12 +43,11 @@ query Tag ($id: ID!, $page: Int) {
       }
       edges {
         node {
-          ...on Post {
+          ...on WordPressPost {
             title
-            timeToRead
-    	      date (format: "MMMM D, YYYY")
-            path
-            summary
+    	      date (format: "MMMM D, Y")
+            path: slug
+            summary:excerpt
             tags {
               title
             }
