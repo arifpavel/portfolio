@@ -1,9 +1,6 @@
 <template>
   <div class="grid grid-cols-2 gap-2">
       <div v-for="post in $static.posts.edges" :key="post.id" class="max-w-sm w-full lg:max-w-full lg:flex h-80">
-        <!-- <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('./../../blog/images/background.jpg')" title="Woman holding a mug">
-                    
-        </div> -->
         <img
           v-if="post.node.featuredMedia"
           :src="post.node.featuredMedia.sourceUrl"
