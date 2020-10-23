@@ -31,18 +31,11 @@
             <g-link v-else to="/#skills" class="text-copy-primary hover:text-red-600">Skills</g-link>
           </li>
           <li>
+            <g-link to="/blog" class="text-copy-primary hover:text-red-600" data-cypress="blog">Blog</g-link>
+          </li>
+          <li>
             <a v-if="$route.path === '/'" href="/#about" v-scroll-to="'#about'" class="text-copy-primary hover:text-red-600" data-cypress="about">About</a>
             <g-link v-else to="/#about" class="text-copy-primary hover:text-red-600">About</g-link>
-          </li>
-          <li>
-            <a v-if="$route.path === '/'" href="/#contact" v-scroll-to="'#contact'" class="text-copy-primary hover:text-red-600" data-cypress="contact">Contact</a>
-            <g-link v-else to="/#contact" class="text-copy-primary hover:text-red-600">Contact</g-link>
-          </li>
-          <li>
-            <g-link to="/docs" class="text-copy-primary hover:text-red-600" data-cypress="docs">Docs</g-link>
-          </li>
-          <li>
-            <g-link to="/blog" class="text-copy-primary hover:text-red-600" data-cypress="blog">Blog</g-link>
           </li>
         </ul>
       </nav>

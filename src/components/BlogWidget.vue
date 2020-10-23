@@ -14,7 +14,7 @@
             <div class="text-gray-900 font-bold text-xl mb-2">
               <a :href=" post.node.path ">{{ post.node.title }}</a>
             </div>
-            <div class="text-gray-700 text-base text-justify" v-html=" truncate( post.node.summary )"></div>
+            <div class="text-gray-700 text-base" v-html=" truncate( post.node.summary )"></div>
             </div>
             <div class="flex items-center">
             <div class="text-sm">
