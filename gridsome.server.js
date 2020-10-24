@@ -8,23 +8,5 @@ const axios = require('axios')
 
 module.exports = function (api, options) {
   api.loadSource(async actions => {
-    let posts;
-    await axios.get('https://jsonplaceholder.typicode.com/posts')
-    .then( (res) => {
-      // console.log(res)
-      posts = res.data
-    })
-    
-    const collection = actions.addCollection({
-      typeName: 'BlogPosts'
-    })
-
-    for (const post of posts) {
-      collection.addNode({
-        id: post.id,
-        title: post.title,
-        body: post.body
-      })
-    }
   })
 }
