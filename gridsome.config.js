@@ -15,7 +15,7 @@ module.exports = {
     {
       use: 'gridsome-source-wordpress',
       options: {
-        baseUrl: 'https://wpdev.test/', // required
+        baseUrl: 'https://arifpavel.skewsoftbd.com/', // required
         apiBase: 'wp-json',
         typeName: 'WordPress',
         perPage: 10,
@@ -61,14 +61,14 @@ module.exports = {
         contentTypeName: 'Post',
         feedOptions: {
           title: 'Gridsome Portfolio Starter Blog',
-          feed_url: 'https://gridsome-portfolio-starter.netlify.com/rss.xml',
-          site_url: 'https://gridsome-portfolio-starter.netlify.com/'
+          feed_url: 'https://arifpavel.netlify.com/rss.xml',
+          site_url: 'https://arifpavel.netlify.com/'
         },
         feedItemOptions: node => ({
           title: node.title,
           description: node.summary,
-          url: 'https://gridsome-portfolio-starter.netlify.com' + node.path,
-          author: 'Andre Madarang',
+          url: 'https://arifpavel.netlify.com' + node.path,
+          author: 'Arif Pavel',
           date: node.date
         }),
         output: {

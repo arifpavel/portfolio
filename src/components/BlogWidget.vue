@@ -53,7 +53,7 @@ query {
 <script>
 export default {
   methods: {
-      truncate(str, num = 70) {
+      truncate(str, num = 60) {
         if (str.length > num) {
           return str.substring(0, num) + "...";
         } else {

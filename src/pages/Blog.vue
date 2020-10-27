@@ -35,7 +35,7 @@
 
 <page-query>
 query Posts ($page: Int) {
-  posts: allWordPressPost (sortBy: "date", order: DESC, perPage: 3, page: $page) @paginate {
+  posts: allWordPressPost (sortBy: "date", order: DESC, perPage: 2, page: $page) @paginate {
     totalCount
     pageInfo {
       totalPages
