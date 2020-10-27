@@ -2,7 +2,7 @@
 
 A static gridsome site for my personal portfolio.
 
-![screenshot](https://user-images.githubusercontent.com/4316355/55691365-a2403380-596b-11e9-93be-05b846ec7760.jpg)
+![screenshot](https://github.com/arifpavel/portfolio/blob/master/static/portfolio-site.png)
 
 ## Demo URL
 
