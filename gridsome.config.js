@@ -58,16 +58,16 @@ module.exports = {
     {
       use: 'gridsome-plugin-rss',
       options: {
-        contentTypeName: 'WordPress',
+        contentTypeName: 'WordPressPost',
         feedOptions: {
           title: 'Arif Pavel | Full Stack Developer',
-          feed_url: 'https://arifpavel.netlify.com/rss.xml',
-          site_url: 'https://arifpavel.netlify.com/'
+          feed_url: 'https://arifpavel.netlify.app/rss.xml',
+          site_url: 'https://arifpavel.netlify.app/'
         },
         feedItemOptions: node => ({
           title: node.title,
           description: node.summary,
-          url: 'https://arifpavel.netlify.com' + node.path,
+          url: 'https://arifpavel.netlify.app' + node.path,
           author: 'Arif Pavel',
           date: node.date
         }),
