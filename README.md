@@ -6,7 +6,7 @@ A static gridsome site for my personal portfolio.
 
 ## Demo URL
 
-[https://arifpavel.netlify.com](https://arifpavel.netlify.com)
+[https://arifpavel.netlify.app](https://arifpavel.netlify.app)
 
 ## Features
 
@@ -41,6 +41,6 @@ After your dev server is running, you can run `npm run test` or `./node_modules/
 
 ## Credits
 
- - Based on Andre Madarang's [Gridsome Portfolio Starter](https://gridsome-portfolio-starter.netlify.com). I wanted to use Wordpress CMS backend with more features instead of markdowns.
+ - Based on Andre Madarang's [Gridsome Portfolio Starter](https://gridsome-portfolio-starter.netlify.app). I wanted to use Wordpress CMS backend with more features instead of markdowns.
  - Illustrations from [unDraw](https://undraw.co)
  - Search is based on [Fuse.js](https://fusejs.io) and [vue-fuse](https://github.com/shayneo/vue-fuse).
