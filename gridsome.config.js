@@ -58,9 +58,9 @@ module.exports = {
     {
       use: 'gridsome-plugin-rss',
       options: {
-        contentTypeName: 'Post',
+        contentTypeName: 'WordPress',
         feedOptions: {
-          title: 'Gridsome Portfolio Starter Blog',
+          title: 'Arif Pavel | Full Stack Developer',
           feed_url: 'https://arifpavel.netlify.com/rss.xml',
           site_url: 'https://arifpavel.netlify.com/'
         },
