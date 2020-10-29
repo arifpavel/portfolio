@@ -7,7 +7,7 @@
 module.exports = {
   siteName: 'Arif Pavel | Full Stack Developer',
   siteDescription: 'Personal portfolio site of Arif Pavel',
-  siteUrl: 'https://arifpavel.netlify.com',
+  siteUrl: 'https://arifpavel.netlify.app',
   plugins: [
     {
       use: 'gridsome-plugin-tailwindcss',
@@ -43,19 +43,6 @@ module.exports = {
       }
     },
     {
-      use: '@gridsome/source-filesystem',
-      options: {
-        path: 'blog/**/*.md',
-        typeName: 'Post',
-        refs: {
-          tags: {
-            typeName: 'Tag',
-            create: true
-          }
-        }
-      }
-    },
-    {
       use: 'gridsome-plugin-rss',
       options: {
         contentTypeName: 'WordPressPost',
@@ -84,13 +71,10 @@ module.exports = {
       }
     },
   ],
-  templates: {
-    Tag: '/tag/:id'
-  },
   transformers: {
     remark: {
       plugins: [
-        [ 'gridsome-plugin-remark-shiki', { theme: 'Material-Theme-Palenight', skipInline: true } ]
+        [ 'gridsome-plugin-remark-shiki', { theme: 'Nord', skipInline: true } ]
       ],
       externalLinksTarget: '_blank',
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
