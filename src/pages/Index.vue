@@ -11,7 +11,7 @@
     </div> <!-- end hero -->
 
     <div class="container-inner mx-auto">
-      <p class="text-lg text-justify sm:text-xl">Hi! I'm Arif Pavel. I've started my programming journey back in 2012 with C & developed problem solving skills. By partifipcating many competitive programming competition i've enhanced my knowledge on advanced computing techniques, Data Structures & other core computer science skills. Then learned OOP & several languages (Java, PHP, Python). In 2013 i joined as a junior web develper at a local company, later worked as web developer, backend engineer, full stack developer in several multinational software company. Since, past few years mainly working on Laravel & VueJS with some other techs/libraries like Flutter, Wordpress, Tailwind. Like to spend leisure time on traveling & contributing opensource projects.</p>
+      <p class="text-lg text-justify sm:text-xl">Hi! I'm Arif Pavel. I've started my programming journey back in 2012 with C & developed problem solving skills. Throw partifipcating competitive programming contests i've enhanced my knowledge on advanced computing techniques, Data Structures & other core computer science skills. Then learned OOP & several languages (Java, PHP, Python). In 2013 i joined as a junior web develper at a local company, later worked as web developer, backend engineer, full stack developer in several multinational software company. Since, past few years mainly working on Laravel & VueJS with some other techs/libraries like Flutter, Wordpress, Tailwind. Like to spend leisure time on traveling & contributing opensource projects.</p>
 
       <div class="flex justify-between items-center py-6">
         <div class="w-full sm:w-1/2 px-8 py-8 sm:py-0">
